@@ -7,6 +7,7 @@ import Input from "../Input/Input";
 import "./Chat.css";
 import Messages from "../Messages/Messages";
 import TextContainer from "../TextContainer/TextContainer";
+import Cred from "../Cred/Cred";
 
 let socket;
 
@@ -76,6 +77,7 @@ const Chat = ({ location }) => {
           setMessage={setMessage}
           sendMessage={sendMessage}
         />
+        <Cred />
       </div>
       <TextContainer users={users} />
     </div>

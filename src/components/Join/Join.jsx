@@ -10,22 +10,27 @@ const Join = () => {
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
+        <Link to="/info" className="info"><ion-icon name="information-circle-outline"></ion-icon></Link>
         <h1 className="heading">Join</h1>
         <div>
           <input
             placeholder="Name"
-            className="joinInput"
+            id="name"
+            className="form__input"
             type="text"
             onChange={e => setName(e.target.value)}
           />
+          <label htmlFor="name" className="form__label">Name</label>
         </div>
         <div>
           <input
-            placeholder="Room"
-            className="joinInput mt-20"
+            placeholder="Chat Room"
+            id="room"
+            className="form__input"
             type="text"
             onChange={e => setRoom(e.target.value)}
           />
+          <label htmlFor="room" className="form__label">Chat Room</label>
         </div>
         <Link
           onClick={e => (!name || !room ? e.preventDefault() : null)}

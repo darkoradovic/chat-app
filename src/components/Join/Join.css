@@ -22,14 +22,55 @@ html, body {
   }
   
   .joinInnerContainer {
-    width: 20%;
+    width: 30%;
   }
   
-  .joinInput {
+  /* .joinInput {
     border-radius: 0;
     padding: 15px 20px;
     width: 100%;
-  }
+  } */
+
+  .form__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  color: #fff;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+	margin: 0 auto;
+  padding: 15px 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 100%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+.info{
+  font-size: 3rem;
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
   
   .heading {
     color: white;
@@ -48,10 +89,18 @@ html, body {
       display: inline-block;
       border: none;
       width: 100%;
+      cursor: pointer;
   }
   
   .mt-20 {
     margin-top: 20px;
+  }
+
+  @media (min-width: 479px) and (max-width: 900px) {
+    .joinInnerContainer {
+      width: 60%;
+    }
+
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
@@ -64,6 +113,12 @@ html, body {
     }
   
   
+  }
+
+  @media  (max-width: 319px) {
+    .joinInnerContainer{
+      width: 90%;
+    }
   }
   
   button:focus {
